@@ -1,14 +1,13 @@
 .menu-page {
-  position: relative; /* for overlay */
+  position: relative; 
   padding: 2rem;
-  background-color: #000; /* main black background */
+  background-color: #000; 
   color: #fff;
   min-height: 100vh;
   overflow: hidden;
   animation: fadeInPage 1.5s ease forwards;
 }
 
-/* Background image overlay */
 .menu-page::before {
   content: "";
   position: absolute;
@@ -16,7 +15,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/assets/menu-bg.jpg") no-repeat center center/cover;
+  background: url("/raphael-ai(2).jpeg") no-repeat center center/cover;
   filter: blur(8px);
   opacity: 0;
   z-index: 0;
@@ -57,7 +56,7 @@
 }
 
 .menu-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-items: center;
@@ -65,18 +64,7 @@
   z-index: 1;
 }
 
-.menu-card {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-  transition: border 0.3s ease, transform 0.3s ease, opacity 1s ease;
-  opacity: 0;
-  animation: fadeInCard 1s ease forwards;
-}
+
 
 .menu-card:hover {
   border: 2px solid #d4af37;
@@ -89,16 +77,111 @@
   }
 }
 
-.menu-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
 
 .price {
   font-weight: bold;
   color: #d4af37;
   margin-top: 0.5rem;
+}
+.menu-page {
+  font-family: 'Georgia', serif;
+}
+
+.menu-hero {
+  position: relative;
+  min-height: 80vh; /* adjust height as needed */
+  background: url("/your-image.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* space for navbar */
+  overflow: hidden;
+}
+
+.menu-hero-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.menu-subtext {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+.menu-items {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-category {
+  font-size: 2rem;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 1rem; 
+  width: 100%;
+}
+.menu-grid {
+ display: flex;
+  flex-wrap: wrap;        /* allows overflow cards to go to next row */
+  justify-content: center; /* center the cards */
+  gap: 2rem;              /* spacing between cards */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.menu-card {
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: border 0.3s ease, transform 0.3s ease, opacity 1s ease;
+  opacity: 0;
+  animation: fadeInCard 1s ease forwards;
+}
+
+.menu-card img {
+  width: 100%;       
+  height: auto;      
+  display: block;
+  background-color: #1a1a1a
+}
+
+.menu-card h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.menu-card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.menu-card:hover {
+  border: 2px solid #d4af37; /* gold glow on hover */
+  box-shadow: 0 0 15px #d4af37aa;
+  transform: translateY(-5px);
 }
