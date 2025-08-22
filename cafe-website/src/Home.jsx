@@ -36,7 +36,7 @@ export default function Home() {
                 Book a Table
             </Link>
             <Link to="/menu" className="order-btn">
-                Order Online
+                Explor Menu
             </Link>
             </div>
         </div>
