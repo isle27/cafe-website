@@ -1,0 +1,156 @@
+/* src/Home.css */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000; /* main calm black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px; /* space for navbar */
+  overflow: hidden;
+}
+
+/* Background image overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/raphael-ai(3).jpeg") no-repeat center center/cover;
+  opacity: 0;
+  animation: fadeInBg 3s ease forwards;
+  z-index: 0;
+}
+
+@keyframes fadeInBg {
+  to {
+    opacity: 0.6;
+  }
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  animation: slideDown 1.5s ease forwards;
+  transform: translateY(-50px);
+  opacity: 0;
+  max-width: 800px;
+  width: 90%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* muted gold */
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  margin-left: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.book-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.book-btn:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.order-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.order-btn:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+
+.about-section {
+  padding: 4rem 2rem;
+  background: #f5f5f5; 
+  color: #000;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #013220; /* forest green */
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.hours-location {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hours-location div {
+  text-align: left;
+  min-width: 200px;
+}
+
+.hours-location h3 {
+  font-size: 1.5rem;
+  color: #d4af37; /* muted gold */
+  margin-bottom: 0.5rem;
+}
+
+.hours-location p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
