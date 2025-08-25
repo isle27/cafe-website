@@ -36,9 +36,6 @@ function Navbar() {
         <Link to="/menu">
           <button className="nav-btn">Menu</button>
         </Link>
-        <Link to="/contact">
-          <button className="nav-btn">Contact</button>
-        </Link>
         <Link to="/private-room">
           <button className="nav-btn">Private Room</button>
         </Link>
