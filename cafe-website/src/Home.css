@@ -1,5 +1,5 @@
 
-.hero {
+.home-hero {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -13,8 +13,7 @@
   overflow: hidden;
 }
 
-/* Background image overlay */
-.hero::before {
+.home-hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -33,7 +32,7 @@
   }
 }
 
-.hero-overlay {
+.home-hero-overlay {
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -46,19 +45,19 @@
   width: 90%;
 }
 
-.hero-title {
+.home-hero-title {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #d4af37; /* muted gold */
 }
 
-.hero-subtext {
+.home-hero-subtext {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #e0e0e0;
 }
 
-.hero-buttons a {
+.home-hero-buttons a {
   display: inline-block;
   text-decoration: none;
   padding: 0.8rem 1.6rem;
@@ -89,7 +88,6 @@
   color: #000;
 }
 
-/* Responsive layout */
 @media (max-width: 600px) {
   .hero-buttons {
     flex-direction: column;
@@ -98,20 +96,20 @@
 }
 
 
-.about-section {
+.about-section-home {
   padding: 4rem 2rem;
-  background: #f5f5f5; 
+  background-color: #f8f3e9; 
   color: #000;
   text-align: center;
 }
 
-.about-section h2 {
+.about-section-home h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #013220; /* forest green */
+  color: #013220; 
 }
 
-.about-section p {
+.about-section-home p {
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 2rem auto;
@@ -141,7 +139,7 @@
   margin: 0.2rem 0;
 }
 
-/* Scroll animations */
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);

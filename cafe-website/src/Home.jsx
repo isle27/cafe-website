@@ -1,4 +1,4 @@
-
+// src/Home.jsx
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -14,7 +14,7 @@ export default function Home() {
         if (rect.top < window.innerHeight - 100) {
           el.classList.add("visible");
         } else {
-          el.classList.remove("visible"); // allow animation to replay on scroll
+          el.classList.remove("visible"); 
         }
       });
     };
@@ -27,13 +27,13 @@ export default function Home() {
 
   return (
     <div className="Home">
-        <section className="hero">
-        <div className="hero-overlay">
-            <h1 className="hero-title">Welcome to Oak & Brew</h1>
-            <p className="hero-subtext">A cozy space for coffee, pastries, and moments of calm</p>
-            <div className="hero-buttons">
+        <section className="home-hero">
+        <div className="home-hero-overlay">
+            <h1 className="home-hero-title">Welcome to Oak & Brew</h1>
+            <p className="home-hero-subtext">A cozy space for coffee, pastries, and moments of calm</p>
+            <div className="home-hero-buttons">
             <Link to="/private-rooms" className="book-btn">
-                Book a Table
+                Book a Room
             </Link>
             <Link to="/menu" className="order-btn">
                 Explor Menu
