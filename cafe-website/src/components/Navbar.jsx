@@ -1,8 +1,8 @@
-// src/components/Navbar.jsx
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import coffeeLogo from "../assets/ChatGPT Image Aug 21, 2025, 12_21_23 PM.png"; // <-- put your coffee logo inside src/assets
+import coffeeLogo from "../assets/ChatGPT Image Aug 21, 2025, 12_21_23 PM.png"; 
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
