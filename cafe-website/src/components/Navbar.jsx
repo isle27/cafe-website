@@ -36,7 +36,7 @@ function Navbar() {
         <Link to="/menu">
           <button className="nav-btn">Menu</button>
         </Link>
-        <Link to="/private-room">
+        <Link to="/privateRoom">
           <button className="nav-btn">Private Room</button>
         </Link>
       </div>
