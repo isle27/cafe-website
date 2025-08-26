@@ -1,0 +1,221 @@
+
+.private-room-page {
+  font-family: 'Georgia', serif;
+  color: #fff;
+  min-height: 100vh;
+  background: url("/FGLFV44r.jpg") no-repeat center center/cover;
+  position: relative;
+  padding: 80px 20px;
+  overflow-x: hidden;
+}
+
+.private-room-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+
+.private-intro {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.private-intro h1 {
+  font-size: 3rem;
+  color: #d4af37;
+  opacity: 0;
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+.private-intro p {
+  font-size: 1.5rem;
+  color: #c5c4c0;
+  opacity: 0;
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+
+.private-room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual Room Card */
+.private-room-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, opacity 1s ease;
+  border: 2px solid transparent;
+  opacity: 0;
+}
+
+.private-room-card.visible {
+  opacity: 1;
+}
+
+.private-room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.private-room-card .desc {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.private-room-card .price {
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.private-room-card button {
+  background: #d4af37;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.private-room-card button:hover {
+  background: #b08c2f;
+  transform: translateY(-3px);
+}
+
+.private-room-card:hover {
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 15px #d4af37aa;
+  transform: translateY(-5px);
+}
+
+/* Booking Form */
+.booking-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  z-index: 10;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  color: #fff;
+  opacity: 0;
+  animation: fadeInCard 0.5s forwards;
+}
+
+.booking-form h2 {
+  margin-bottom: 1rem;
+  color: #d4af37;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 0.7rem;
+   background: rgba(255, 255, 255, 0.1);
+   color: #e4d9d9;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.booking-form button {
+  width: 100%;
+  background: #d4af37;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: #b08c2f;
+}
+
+
+.form-overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(61, 59, 59, 0.7);
+  z-index: 9;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #d4af37;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #d4af37aa;
+  z-index: 20;
+  animation: fadeInToast 0.5s forwards, fadeOutToast 0.5s 2.5s forwards;
+}
+
+@keyframes fadeInToast {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutToast {
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Fade-in for cards */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInCard {
+  to { opacity: 1; }
+}

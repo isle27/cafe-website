@@ -8,3 +8,8 @@
 .footer p {
   margin: 0;
 }
+.footer-contact {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #bbb;
+}

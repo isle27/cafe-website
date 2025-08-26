@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className="home-hero-title">Welcome to Oak & Brew</h1>
             <p className="home-hero-subtext">A cozy space for coffee, pastries, and moments of calm</p>
             <div className="home-hero-buttons">
-            <Link to="/private-rooms" className="book-btn">
+            <Link to="/PrivateRoom" className="book-btn">
                 Book a Room
             </Link>
             <Link to="/menu" className="order-btn">
