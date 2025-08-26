@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
+import "./Navbar.css";
 import coffeeLogo from "../assets/ChatGPT Image Aug 21, 2025, 12_21_23 PM.png"; 
 
 function Navbar() {
