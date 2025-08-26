@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./privateRoom.css";
+import "./PrivateRoom.css";
 
 export default function PrivateRooms() {
   const [showForm, setShowForm] = useState(false);
