@@ -43,3 +43,22 @@
   height: 40px;
   width: auto;
 }
+
+
+@media (max-width: 599px) {
+  .navbar{
+    width: 90%;
+    padding: 1px !important;
+  }
+  .nav-buttons{
+    width: 80%;
+    gap: 0.1rem !important;
+  }
+  .nav-btn{
+    max-width: 120px; /* optional max width */
+    font-size: 12px !important;
+    padding: 4px 6px !important;  }
+    .logo{
+      font-size: 20px !important;
+    }
+}

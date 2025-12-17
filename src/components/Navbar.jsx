@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import coffeeLogo from "../assets/ChatGPT Image Aug 21, 2025, 12_21_23 PM.png"; 
+import coffeeLogo from "../assets/download-removebg-preview.png"; 
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +34,7 @@ function Navbar() {
           <button className="nav-btn">About</button>
         </Link>
         <Link to="/menu">
-          <button className="nav-btn">Menu</button>
+          <button className="nav-btn"> Menu</button>
         </Link>
         <Link to="/privateRoom">
           <button className="nav-btn">Private Room</button>
