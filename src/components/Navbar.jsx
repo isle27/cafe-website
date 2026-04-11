@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import coffeeLogo from "../assets/download-removebg-preview.png"; 
+import coffeeLogo from "../assets/ChatGPT Image Apr 8, 2026, 05_40_16 AM.png"; 
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

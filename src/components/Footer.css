@@ -1,15 +1,41 @@
 .footer {
+  position: relative;
+  padding: 2.2rem 1.2rem 2.5rem;
+  background:
+    linear-gradient(180deg, rgba(15, 15, 15, 0.2), rgba(15, 15, 15, 1)),
+    var(--bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
   text-align: center;
-  padding: 1.5rem;
-  background: #111;
-  color: #aaa;
+}
+
+.footer-content {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-top: 0.5rem;
+}
+
+.footer-content > p {
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
   font-size: 0.9rem;
 }
-.footer p {
-  margin: 0;
-}
-.footer-contact {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #bbb;
+
+@media (max-width: 640px) {
+  .footer {
+    padding-inline: 1rem;
+  }
+
+  .footer-contact {
+    gap: 0.55rem 1rem;
+    flex-direction: column;
+  }
 }

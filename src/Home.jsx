@@ -1,4 +1,3 @@
-// src/Home.jsx
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -14,7 +13,7 @@ export default function Home() {
         if (rect.top < window.innerHeight - 100) {
           el.classList.add("visible");
         } else {
-          el.classList.remove("visible"); 
+          el.classList.remove("visible");
         }
       });
     };
@@ -27,28 +26,31 @@ export default function Home() {
 
   return (
     <div className="Home">
-        <section className="home-hero">
+      <section className="home-hero">
         <div className="home-hero-overlay">
-            <h1 className="home-hero-title">Welcome to Oak & Brew</h1>
-            <p className="home-hero-subtext">A cozy space for coffee, pastries, and moments of calm</p>
-            <div className="home-hero-buttons">
+          <span className="hero-eyebrow">Oak & Brew</span>
+          <h1 className="home-hero-title">Welcome to Oak & Brew</h1>
+          <p className="home-hero-subtext">
+            A cozy space for coffee, pastries, and moments of calm
+          </p>
+          <div className="home-hero-buttons">
             <Link to="/PrivateRoom" className="book-btn">
-                Book a Room
+              Book a Room
             </Link>
             <Link to="/menu" className="order-btn">
-                Explor Menu
+              Explore Menu
             </Link>
-            </div>
+          </div>
         </div>
-</section>
+      </section>
 
       <section className="about-section fade-in" id="about">
         <div className="about-content">
           <h2>About Oak & Brew</h2>
           <p>
-            Oak & Brew is a cozy café where coffee, pastries, and warm moments come together. 
-            We pride ourselves on a relaxing atmosphere and high-quality ingredients for every
-            cup and bite.
+            Oak & Brew is a cozy cafe where coffee, pastries, and warm moments come
+            together. We pride ourselves on a relaxing atmosphere and high-quality
+            ingredients for every cup and bite.
           </p>
 
           <div className="hours-location">
